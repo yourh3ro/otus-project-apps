@@ -1,0 +1,28 @@
+name: Trigger Tekton CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger-tekton:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send request to Tekton Trigger for .NET app
+        run: |
+          curl -X POST http://tekton-trigger-dotnet.158.160.5.137.nip.io/ \
+          -H "Content-Type: application/json" \
+          -d '{"ref": "refs/heads/main"}'
+
+      - name: Send request to Tekton Trigger for Go app
+        run: |
+          curl -X POST http://tekton-trigger-go.158.160.5.137.nip.io/ \
+          -H "Content-Type: application/json" \
+          -d '{"ref": "refs/heads/main"}'
+
+      - name: Send request to Tekton Trigger for Python app
+        run: |
+          curl -X POST http://tekton-trigger-python.158.160.5.137.nip.io/ \
+          -H "Content-Type: application/json" \
+          -d '{"ref": "refs/heads/main"}'
