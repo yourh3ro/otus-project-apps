@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: python-app
-        image: harbor.158.160.26.84.nip.io/python-app:latest  
+        image: harbor.158.160.5.137.nip.io/python-app:latest  
         ports:
         - containerPort: 8080
         imagePullSecrets:

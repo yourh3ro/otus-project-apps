@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: dotnet-app
-        image: harbor.158.160.26.84.nip.io/dotnet-app:latest 
+        image: harbor.158.160.5.137.nip.io/dotnet-app:latest 
         ports:
         - containerPort: 5000
         imagePullSecrets:

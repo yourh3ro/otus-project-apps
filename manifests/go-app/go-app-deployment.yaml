@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: go-app
-        image: harbor.158.160.26.84.nip.io/go-app:latest  
+        image: harbor.158.160.5.137.nip.io/go-app:latest  
         ports:
         - containerPort: 8080
         imagePullSecrets:
