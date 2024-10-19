@@ -20,7 +20,7 @@ spec:
         ports:
         - containerPort: 8080
         imagePullSecrets:
-        - name: harbor-registry-secret
+        - name: harbor-secret
         livenessProbe:
           httpGet:
             path: /health
