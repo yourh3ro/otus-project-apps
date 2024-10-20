@@ -19,8 +19,6 @@ spec:
         image: harbor.158.160.5.137.nip.io/library/go-app:latest  
         ports:
         - containerPort: 8080
-        imagePullSecrets:
-        - name: harbor-secret
         livenessProbe:
           httpGet:
             path: /health
